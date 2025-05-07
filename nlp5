@@ -1,0 +1,118 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMoOPTgrt3RqwOAjUusvM03",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/poovi-2004/dvt-and-nlp/blob/main/nlp5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "FEq_xLhrBnd4"
+      },
+      "outputs": [],
+      "source": [
+        "import nltk"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from nltk.chat.util import Chat, reflections"
+      ],
+      "metadata": {
+        "id": "trosZqueBpso"
+      },
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "input_output_patterns = [\n",
+        " (r'Hi there!', ['Hello!']),\n",
+        " (r'How are you?', ['I am doing well, thank you. How are you?']),\n",
+        " (r'What is your name?', ['My name is Chatbot.']),\n",
+        " (r'Quit|Bye|Thank you', ['Goodbye!', 'Bye! Nice talking to you.'])\n",
+        "]"
+      ],
+      "metadata": {
+        "id": "aV8_ToxbEdtQ"
+      },
+      "execution_count": 20,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "chatbot = Chat(input_output_patterns, reflections)"
+      ],
+      "metadata": {
+        "id": "dBOjYeFREevN"
+      },
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "chatbot.converse()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WcCzdCsKEk2c",
+        "outputId": "7d79d096-ff15-4682-bff3-e700e8ae78ef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            ">Hi there!\n",
+            "None\n",
+            ">What is your name?\n",
+            "My name is Chatbot.\n",
+            ">How are you?\n",
+            "I am doing well, thank you. How are you?\n",
+            ">Quit\n",
+            "Bye! Nice talking to you.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "sfyz2kOvEyaQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
